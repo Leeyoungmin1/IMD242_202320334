@@ -1,5 +1,5 @@
 //1.마우스 위치에 따라 최소 3개에서 최대 16개의 사각 타일로 채운다.
-
+//마우스 모양 도라야키로 바꿀 예정 
 int tileNum;
 int randomSeed = 0;
 float noiseMult = 0.1;

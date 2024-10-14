@@ -79,6 +79,8 @@ void draw() {
       noStroke();
       fill(220, 10, 10);
       circle(centerX + tileSize * .21, centerY - tileSize * .31, tileSize * .065);
+      circle(centerX - tileSize * .2, centerY + tileSize * .2, tileSize * .065);
+
       //목걸이
       rect(centerX - tileSize * .15, centerY - tileSize * .13, tileSize * .3, tileSize * .05);
       //입술
@@ -90,6 +92,15 @@ void draw() {
       //방울
       fill(220, 180, 10);
       circle(centerX + tileSize * .15, centerY - tileSize * .11, tileSize * .08);
+
+      //수염, 꼬리선
+      stroke(0);
+      line(centerX - tileSize * .17, centerY + tileSize * .19, centerX - tileSize * .13, centerY + tileSize * .16);
+      line(centerX + tileSize * .07, centerY - tileSize * .3, centerX + tileSize * .14, centerY - tileSize * .27);
+      line(centerX + tileSize * .05, centerY - tileSize * .25, centerX + tileSize * .14, centerY - tileSize * .25);
+      line(centerX + tileSize * .07, centerY - tileSize * .2, centerX + tileSize * .14, centerY - tileSize * .23);
+
+
 
       pushMatrix();
       translate(centerX, centerY);

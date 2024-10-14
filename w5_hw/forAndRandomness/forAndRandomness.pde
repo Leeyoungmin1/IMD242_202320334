@@ -1,5 +1,5 @@
 //1.마우스 위치에 따라 최소 3개에서 최대 16개의 사각 타일로 채운다.
-//마우스 모양 도라야키로 바꿀 예정 
+//마우스 모양 도라야키로 바꿀 예정
 int tileNum;
 int randomSeed = 0;
 float noiseMult = 0.1;
@@ -15,12 +15,14 @@ void setup() {
 
 void draw() {
   randomSeed(0);
+  //마우스X 위치에 따라 노을이 지는 하늘(?)
   colorMode(HSB);
   ra = mouseX * .5 * .5;
   ga = mouseY;
   ba = mouseY * .3;
   background(ra, 150, 200);
   colorMode(RGB);
+  //도라에몽 공터
   fill(150, 220, 100);
   rect(0, height * .7, width, height * .7);
   fill(150);
@@ -68,13 +70,24 @@ void draw() {
       fill(255);
       ellipse(centerX, centerY + tileSize * .35, tileSize * .2, tileSize * .12);
       ellipse(centerX + tileSize * .11, centerY - tileSize * .25, tileSize * .2, tileSize * .25);
+      //눈
       stroke(0);
       ellipse(centerX + tileSize * .13, centerY - tileSize * .36, tileSize * .05, tileSize * .1);
+      fill(0);
+      ellipse(centerX + tileSize * .14, centerY - tileSize * .35, tileSize * .025, tileSize * .05);
+      //코
       noStroke();
       fill(220, 10, 10);
       circle(centerX + tileSize * .21, centerY - tileSize * .31, tileSize * .065);
-
+      //목걸이
       rect(centerX - tileSize * .15, centerY - tileSize * .13, tileSize * .3, tileSize * .05);
+      //입술
+      fill(255);
+      circle(centerX + tileSize * .2, centerY - tileSize * .24, tileSize * .065);
+
+      ellipse(centerX + tileSize * .145, centerY + tileSize * .06, tileSize * .05, tileSize * .2);
+
+      //방울
       fill(220, 180, 10);
       circle(centerX + tileSize * .15, centerY - tileSize * .11, tileSize * .08);
 
@@ -83,7 +96,7 @@ void draw() {
       //rotate(radians(30 * randomVal));
       rotate(radians(-180 * noiseVal));
       line(0, tileSize * .5 * .8, 0, 0);
-      //넌 이제부터 민들레 홀씨다!
+
       fill(60, 100, 220);
       stroke(20, 60, 80);
       ellipse(0, tileSize * .5 * .5 * .8, tileSize * .15, tileSize * .4);
@@ -95,4 +108,11 @@ void draw() {
       popMatrix();
     }
   }
+  //도라야끼
+  stroke(0);
+  fill(240, 220, 140);
+  circle(mouseX, mouseY, 45);
+  noStroke();
+  fill(150, 100, 50);
+  circle(mouseX, mouseY, 32);
 }

@@ -1,5 +1,5 @@
 //1.마우스 위치에 따라 최소 3개에서 최대 16개의 사각 타일로 채운다.
-//"도라야끼가 먹고 싶은 도라에몽"  -공터에서- 
+//"도라야끼가 먹고 싶은 도라에몽"  -공터에서-
 int tileNum;
 int randomSeed = 0;
 float noiseMult = 0.1;
@@ -90,7 +90,7 @@ void draw() {
       ellipse(centerX + tileSize * .145, centerY + tileSize * .06, tileSize * .05, tileSize * .2);
 
       //방울
-      fill(220, 180, 10);
+      fill(240, 200, 10);
       circle(centerX + tileSize * .15, centerY - tileSize * .11, tileSize * .08);
 
       //수염, 꼬리선

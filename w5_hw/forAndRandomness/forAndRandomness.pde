@@ -61,7 +61,7 @@ void draw() {
       //fill(255);
       stroke(20, 60, 80);
       noStroke();
-      circle(centerX, centerY, tileSize * .8);
+      circle(centerX, centerY, tileSize * .99);
       fill(60, 100, 220);
       ellipse(centerX, centerY + tileSize * .17, tileSize * .27, tileSize * .4);
       //ellipse(centerX, centerY, tileSize * .4, tileSize * .45);

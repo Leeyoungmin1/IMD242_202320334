@@ -11,10 +11,12 @@ void setup() {
 }
 
 float barWidth = 13;
-float graphBegin = 330;
-float graphGap = 160;
+float graphBegin;
+float graphGap;
 
 void draw () {
+  graphBegin = width * .25;
+  graphGap = width * .25 * .5;
   background(0);
   strokeWeight(barWidth);
   stroke(255);

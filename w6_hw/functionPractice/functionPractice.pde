@@ -1,7 +1,5 @@
 int randomSeed = int(random(10000));
-float house = 6;
-float window = 3;
-float x, w, h;
+float House = 5;
 float r, g, b;
 
 void setup() {
@@ -13,31 +11,45 @@ void mousePressed() {
 }
 
 void draw() {
-  background(200);
-  x = random(0, width - w);
-  w = random(100, width);
-  h = random(300, height);
-  r = random(0, 200);
-  g = random(0, 200);
-  b = random(0, 200);
   randomSeed(randomSeed);
-  fill(r, g, b);
-  //rect(x, height - h, w, h);
-  //fill(100, 100, 255);
-  for (house = 0; house < 6; house++) {
-    rect(x, height - h, w, h);
+  background(200, 230, 255);
+  for (int n = 0; n < 5; n++) {
+    house(random(0.1 * width, 0.9 * width), height - random(50, 200), random(20, 30), random(50, 200));
   }
-  for (window = 0; window < 3; window++) {
-    fill(150, 200, 255);
-    rect(x + w * .3 * window + w * .1, height - h + h * .1, w * .2, w * .2);
-  }
-  //rect(x + w * .1, height - h + h * .1, w * .2, w * .2);
-  //rect(x + w * .4, height - h + h * .1, w * .2, w * .2);
-  //rect(x + w * .7, height - h + h * .1, w * .2, w * .2);
-  //rect(x + w * .1, height - h + h * .4 + 5, w * .2, w * .2);
-  //rect(x + w * .4, height - h + h * .4 + 5, w * .2, w * .2);
-  //rect(x + w * .7, height - h + h * .4 + 5, w * .2, w * .2);
+}
 
-  fill(220, 160, 100);
-  rect(x + w * .5, height - h + h * .7, w * .2, h * .4);
+void house(float x, float y, float w, float h) {
+  pushStyle();
+  pushMatrix();
+  h = random(200, 600);
+  translate(x, height - h);
+  strokeWeight(2);
+  //line(0, 0, 0, -h);
+  r = random(50, 150);
+  g = random(50, 150);
+  b = random(50, 150);
+  fill(r, g, b);
+  rect(0, 0, w * 5, h);
+  pushMatrix();
+  //translate(0, -h);
+  float windowC = random(220, 250);
+  int windowNum = 2;
+  float windowSize = w * 4 / float(windowNum);
+  for (int n = 0; n < windowNum; n++) {
+    //float petalRandDMult = random(0.95, 1.05);
+    //float petalA = radians(-90 + n * 360 / float(windowNum));
+    //pushMatrix();
+    //noStroke();
+    fill(130, 180, windowC);
+    rect(n * 50 + 10, 10, windowSize * .8, windowSize * .8);
+    rect(n * 50 + 10, 20 + windowSize * .8, windowSize * .8, windowSize * .8);
+
+    fill(150, 100, 50);
+    rect(w * 5 * .4, h * .7, w +20, h);
+    //popMatrix();
+  }
+
+  popMatrix();
+  popMatrix();
+  popStyle();
 }

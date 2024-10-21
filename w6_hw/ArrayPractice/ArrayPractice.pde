@@ -17,7 +17,9 @@ float graphGap;
 void draw () {
   graphBegin = width * .25;
   graphGap = width * .25 * .5;
-  background(0);
+  background(180);
+  fill(0);
+  rect(width * .15, height * .15, width - width * .3, height - height * .3);
   strokeWeight(barWidth);
   stroke(255);
   strokeCap(SQUARE);

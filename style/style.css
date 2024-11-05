@@ -4,18 +4,50 @@
 }
 
 h1 {
-  color: blueviolet;
+  color: rgb(154, 101, 253);
 }
 
-p {
-  color: darkorchid;
+body {
+  background-color: black;
 }
 
 .head {
   background-color: black;
   padding: 1.25rem;
+  padding-inline: 150px;
+  box-shadow: 0px 5px 20px rgb(138, 113, 113);
 }
 
-.week {
-  padding: 1.875rem;
+.container-week {
+  display: grid;
+  padding-inline: 300px;
+  padding-top: 80px;
+}
+.container-week-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 30px;
+}
+.container-week-card-in {
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.container-week-card-in .week-class {
+  color: rgb(154, 101, 253);
+}
+.container-week-card-in .week-hw {
+  color: rgb(154, 101, 253);
+}
+
+.week-num {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.link {
+  margin-top: 0.625rem;
+  color: rgb(154, 101, 253);
 }

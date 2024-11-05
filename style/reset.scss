@@ -1,0 +1,92 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation 각각의 브라우저에서 텍스트 사이즈를 설정하는 것을 제거 */
+html {
+  // -moz-text-size-adjust: none;
+  // -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS 디폴트 마진 제거 */
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults 웹페이지의 내용이 아무리 적어도 바디의 사이즈가 최소한 창의 너비만큼은 되게 만듦 */
+body {
+  min-height: 100vh;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements 제목의 라인하이트는 작은게 좋기 때문에 작게 설정한 것 */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings 좌측 정렬 기준으로 오른쪽의 흘려진 부분이 예쁘게 보이게 만듦 */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles 글자가 디센더에 의해 이상하게 나오는 것을 방지, 링크의 색이 파란색이 아니라 다른곳에서 쓰는 글자의 색과 동일하게 나오도록 변경 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentcolor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons 인풋이나 버튼 등은 설정했던 글자체가 잘 안먹는 경우가 있는데 그것을 해결해줌 */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny 텍스트에리어가 너무 작게 잡히는 것을 막기 위함(글자 크기 대비 10배) */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin 클릭해서 해당 지점으로 갈때 마진이 있도록 하는 기능(너무 팍 붙는 경우를 막아줌) */
+:target {
+  scroll-margin-block: 5ex;
+}

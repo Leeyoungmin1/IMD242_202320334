@@ -47,6 +47,10 @@ body {
         .week-hw {
           color: $purple_color;
         }
+
+        .Nlink {
+          color: rgba($purple_color, 0.4);
+        }
       }
     }
   }
@@ -68,5 +72,9 @@ body {
 
 .link {
   margin-top: 0.625rem;
-  color: $purple_color;
+  // color: $purple_color;
+}
+
+.Nlink {
+  color: white;
 }

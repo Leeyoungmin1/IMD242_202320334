@@ -40,6 +40,9 @@ body {
 .container-week-card-in .week-hw {
   color: rgb(154, 101, 253);
 }
+.container-week-card-in .Nlink {
+  color: rgba(154, 101, 253, 0.4);
+}
 
 .week-num {
   font-size: 20px;
@@ -49,5 +52,8 @@ body {
 
 .link {
   margin-top: 0.625rem;
-  color: rgb(154, 101, 253);
+}
+
+.Nlink {
+  color: white;
 }
